@@ -34,7 +34,7 @@ public class Main {
 //METHODE DEMANDERVALEUR
     public static void AskValue(int saisie, Integer[]tab) throws NumberFormatException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        System.out.print("MERCI DE RENTRER UNE VALEUR: ");
+        System.out.print("\nMERCI DE RENTRER UNE VALEUR: ");
         try {
             saisie = Integer.parseInt(br.readLine());
             exist(tab, saisie);
@@ -68,7 +68,8 @@ public class Main {
             System.out.println("Malheureusement, votre valeur n'est pas dans le tableau");
 
         } else {
-            System.out.println("\nVotre nouveau tableau : " + Arrays.toString(tab));
+            trier(tab);
+
         }
         AskValue(saisie,tab);
     }
