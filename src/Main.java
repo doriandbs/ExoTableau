@@ -32,7 +32,7 @@ public class Main {
         demandervaleur(saisie, tableauConca);
 }
 //METHODE DEMANDERVALEUR
-    public static void demandervaleur(int saisie, Integer[]tab) throws NumberFormatException,IOException {
+    public static void demandervaleur(int saisie, Integer[]tab) throws NumberFormatException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.print("MERCI DE RENTRER UNE VALEUR: ");
         try {
