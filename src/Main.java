@@ -29,18 +29,18 @@ public class Main {
         MinMax(tableau, min, max); //Affichage du min et max avec leurs indices
         tableauConca = TabConca(tableau, tableau2); //concatenation
         int saisie=0;
-        demandervaleur(saisie, tableauConca);
+        AskValue(saisie, tableauConca);
 }
 //METHODE DEMANDERVALEUR
-    public static void demandervaleur(int saisie, Integer[]tab) throws NumberFormatException {
+    public static void AskValue(int saisie, Integer[]tab) throws NumberFormatException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.print("MERCI DE RENTRER UNE VALEUR: ");
         try {
             saisie = Integer.parseInt(br.readLine());
-            existe(tab, saisie);
+            exist(tab, saisie);
         }catch(Exception e){
             System.out.println("Veuillez rentrer un chiffre !");
-            demandervaleur(saisie, tab);
+            AskValue(saisie, tab);
         }
     }
 //METHODE CONCATENATION
@@ -53,7 +53,7 @@ public class Main {
         return tableauConca;
     }
 //METHODE VERIFICATION SI VALEUR EXISTE DANS LE TABLEAU
-    public static void existe(Integer[] tab, int saisie) throws IOException {
+    public static void exist(Integer[] tab, int saisie) throws IOException {
         int result = 0;
         System.out.println("\nSi votre saisie est dans le tableau, nous allons multiplier par 5 chaques valeurs correspondantes à votre saisie");
         for (int i = 0; i < tab.length; i++) {
@@ -70,7 +70,7 @@ public class Main {
         } else {
             System.out.println("\nVotre nouveau tableau : " + Arrays.toString(tab));
         }
-        demandervaleur(saisie,tab);
+        AskValue(saisie,tab);
     }
 //METHODE AFFICHE MIN MAX
     public static void MinMax(Integer[] tableau, int min, int max) {
